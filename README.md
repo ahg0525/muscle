@@ -22,6 +22,35 @@ pnpm build
 pnpm test
 ```
 
+## 🏗️ 아키텍처 및 설계 결정
+
+### 기술 스택
+- **Frontend**: React 18 + TypeScript + Vite
+- **스타일링**: Emotion (styled-components)
+- **상태관리**: TanStack Query + React useState
+- **라우팅**: React Router DOM v7
+- **차트**: Chart.js + react-chartjs-2
+- **달력**: react-datepicker
+- **HTTP 클라이언트**: Axios
+
+### 폴더 구조
+```
+src/
+├── api/          # API 통신 로직
+├── components/   # 재사용 가능한 컴포넌트
+├── hooks/        # 커스텀 훅
+├── pages/        # 페이지 컴포넌트
+├── types/        # TypeScript 타입 정의
+├── mocks/        # 목 데이터
+└── assets/       # 정적 자원
+```
+
+### 상태관리
+- **TanStack Query**: 기본 설정만 적용 (useQuery)
+- **useState**: 로컬 컴포넌트 상태 관리
+- **API 호출**: 직접 axios 사용 (useEffect + useState 패턴)
+- **전역 상태**: 필요성에 따라 Context API 사용 가능
+
 ## 🎞 DEMO
 
 ![pc1](https://github.com/user-attachments/assets/9c63c58d-c38e-48f4-bc6c-e46dafd5d2f6)
